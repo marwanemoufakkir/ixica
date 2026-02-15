@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<!-- favicon -->
-	<title>@yield('title', 'Twoet')</title>
+	<title>@yield('title', 'Ixica — SIP Trunking Canada')</title>
 	<link rel="icon" type="image/x-icon" href="{{ asset('assets/images/resources/banner-icon.ico') }}">
 	<!-- fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,98 +42,169 @@
 	<div class="page-wrapper">
 		<!-- main-header -->
 		<header class="main-header">
-			<div class="header-menu">
+			<div class="header-menu header-menu-ixica">
 				<!-- header-logo -->
 				<div class="logo-box">
-					<a href="{{ route('home') }}">
-						<img src="{{ asset('assets/images/resources/logo.png') }}" alt="header-logo">
+					<a href="{{ route('home') }}" aria-label="Ixica Home">
+						<img src="{{ asset('assets/images/resources/logo.png') }}" alt="Ixica — SIP Trunking Canada">
 					</a>
 				</div>
 				<nav class="navbar-expand-lg">
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav me-auto">
-							<li class="dropdown">
-								<a class="nav-link dropdown-toggle" href="#">Home </a>
-								<ul>
-									<li><a href="{{ route('home') }}">Home One</a></li>
-									<li><a href="{{ route('home2') }}">Home Two</a></li>
-									<li><a href="{{ route('home3') }}">Home Three</a></li>
-									<li><a href="{{ route('home4') }}">Home Four</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a class="nav-link dropdown-toggle" href="#">Pages</a>
-								<ul>
-									<li><a href="{{ route('about') }}">About Us</a></li>
-									<li><a class="dropdown-sub-toggle" href="{{ route('movies.list') }}">Movies</a>
-										<ul class="sub-menu-inner">
-											<li><a href="{{ route('movies.list') }}">Movies List</a></li>
-											<li><a href="{{ route('movies.details') }}">Movies Details</a></li>
-										</ul>
-									</li>
-									<li><a class="dropdown-sub-toggle" href="#">Team</a>
-										<ul class="sub-menu-inner">
-											<li><a href="{{ route('team.member') }}">Team Member</a></li>
-											<li><a href="{{ route('team.details') }}">Team Details</a></li>
-										</ul>
-									</li>
-									<li><a href="{{ route('package') }}">Package</a></li>
-									<li><a href="{{ route('career') }}">Career</a></li>
-									<li><a href="{{ route('faq') }}">FAQs</a></li>
-									<li><a href="{{ route('testimonial') }}">Testimonial</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a class="nav-link dropdown-toggle" href="#">Services</a>
-								<ul>
-									<li><a href="{{ route('services.list') }}">Services List</a></li>
-									<li><a href="{{ route('services.details') }}">Services Details</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a class="nav-link dropdown-toggle" href="#">Shop</a>
-								<ul>
-									<li><a href="{{ route('shop.page') }}">Shop Page</a></li>
-									<li><a href="{{ route('shop.details') }}">Shop Details</a></li>
-									<li><a href="{{ route('checkout') }}">Checkout</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a class="nav-link dropdown-toggle" href="#">Blog</a>
-								<ul>
-									<li><a href="{{ route('blog.list') }}">Blog List</a></li>
-									<li><a href="{{ route('blog.details') }}">Blog Details</a></li>
-								</ul>
-							</li>
-							<li>
-								<a class="text-decoration-none" href="{{ route('contact') }}">Contact</a>
-							</li>
-							<li>
-								<div class="menu-search-box">
-									<a href="#" class="search-toggler">
-										<i class="icon-search"></i>
-									</a>
+						<ul class="navbar-nav navbar-nav-ixica me-auto">
+							{{-- Solutions (4-column mega, like Industries) --}}
+							<li class="dropdown dropdown-mega">
+								<a class="nav-link dropdown-toggle" href="{{ route('services.list') }}">Solutions</a>
+								<div class="mega-menu mega-menu-solutions">
+									<div class="mega-menu-inner">
+										<div class="mega-menu-grid mega-menu-cols-4">
+											<div class="mega-menu-column">
+												<h4 class="mega-menu-title">Wholesale Infrastructure</h4>
+												<ul class="mega-menu-links">
+													<li><a href="{{ route('services.list') }}#wholesale-sip">Wholesale SIP Trunking</a><span class="mega-menu-desc">Carrier-grade routing for telecom providers and ITSPs.</span></li>
+													<li><a href="{{ route('services.list') }}#carrier-interconnect">Carrier Interconnect</a><span class="mega-menu-desc">Direct interconnection and high-volume voice routing.</span></li>
+													<li><a href="{{ route('services.list') }}#network">Network &amp; Infrastructure</a><span class="mega-menu-desc">Architecture, redundancy, and Canadian routing overview.</span></li>
+													<li><a href="{{ route('services.list') }}#sla">SLA &amp; Reliability</a><span class="mega-menu-desc">Uptime guarantees and performance standards.</span></li>
+												</ul>
+											</div>
+											<div class="mega-menu-column">
+												<h4 class="mega-menu-title">Partner Programs</h4>
+												<ul class="mega-menu-links">
+													<li><a href="{{ route('contact') }}?subject=reseller">SIP Reseller Program</a><span class="mega-menu-desc">Recurring revenue opportunities for MSPs.</span></li>
+													<li><a href="{{ route('services.list') }}#partner-benefits">Partner Benefits</a><span class="mega-menu-desc">Volume pricing, provisioning, and support.</span></li>
+													<li><a href="{{ route('contact') }}?subject=partner">Become a Partner</a><span class="mega-menu-desc">Application and onboarding process.</span></li>
+												</ul>
+											</div>
+											<div class="mega-menu-column">
+												<h4 class="mega-menu-title">Enterprise Solutions</h4>
+												<ul class="mega-menu-links">
+													<li><a href="{{ route('services.list') }}#enterprise">Enterprise SIP Trunking</a><span class="mega-menu-desc">Scalable voice solutions for businesses.</span></li>
+													<li><a href="{{ route('services.list') }}#3cx">SIP for 3CX</a><span class="mega-menu-desc">Optimized routing for 3CX deployments.</span></li>
+													<li><a href="{{ route('services.list') }}#yeastar">SIP for Yeastar</a><span class="mega-menu-desc">Certified compatibility and configuration.</span></li>
+												</ul>
+											</div>
+											<div class="mega-menu-column mega-menu-cta-col">
+												<h4 class="mega-menu-title">Why Choose Ixica?</h4>
+												<p class="mega-menu-trust">Canadian infrastructure. Redundant routing. Dedicated telecom engineers.</p>
+												<a href="{{ route('contact') }}?subject=specialist" class="btn btn-mega-cta">Talk to a Specialist<i class="icon-1"></i></a>
+											</div>
+										</div>
+									</div>
 								</div>
 							</li>
-							<li>
-								<div class="shopping-cart-box">
-									<a href="{{ route('checkout') }}">
-										<i class="icon-shopping-basket"></i>
-									</a>
+							{{-- Industries (4-column mega, like Solutions) --}}
+							<li class="dropdown dropdown-mega">
+								<a class="nav-link dropdown-toggle" href="{{ route('services.list') }}#industries">Industries</a>
+								<div class="mega-menu mega-menu-industries">
+									<div class="mega-menu-inner">
+										<div class="mega-menu-grid mega-menu-cols-4">
+											<div class="mega-menu-column">
+												<h4 class="mega-menu-title">Professional Services</h4>
+												<ul class="mega-menu-links">
+													<li><a href="{{ route('services.list') }}#law">Law Firms</a><span class="mega-menu-desc">Secure and reliable client communications.</span></li>
+													<li><a href="{{ route('services.list') }}#transportation">Transportation</a><span class="mega-menu-desc">Stable dispatch and logistics routing.</span></li>
+												</ul>
+											</div>
+											<div class="mega-menu-column">
+												<h4 class="mega-menu-title">Healthcare &amp; Education</h4>
+												<ul class="mega-menu-links">
+													<li><a href="{{ route('services.list') }}#healthcare">Healthcare</a><span class="mega-menu-desc">Reliable voice infrastructure for critical services.</span></li>
+													<li><a href="{{ route('services.list') }}#education">Education</a><span class="mega-menu-desc">Scalable voice for institutions and campuses.</span></li>
+												</ul>
+											</div>
+											<div class="mega-menu-column">
+												<h4 class="mega-menu-title">Government &amp; Public</h4>
+												<ul class="mega-menu-links">
+													<li><a href="{{ route('services.list') }}#government">Government</a><span class="mega-menu-desc">Carrier-grade routing with compliance focus.</span></li>
+												</ul>
+											</div>
+											<div class="mega-menu-column mega-menu-cta-col">
+												<h4 class="mega-menu-title">Industry Solutions</h4>
+												<p class="mega-menu-trust">Voice infrastructure tailored to your sector. Canadian routing and compliance built in.</p>
+												<a href="{{ route('services.list') }}#industries" class="btn btn-mega-cta">Explore All Industries<i class="icon-1"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							{{-- Resources (4-column mega, like Solutions) --}}
+							<li class="dropdown dropdown-mega">
+								<a class="nav-link dropdown-toggle" href="{{ route('blog.list') }}">Resources</a>
+								<div class="mega-menu mega-menu-resources">
+									<div class="mega-menu-inner">
+										<div class="mega-menu-grid mega-menu-cols-4">
+											<div class="mega-menu-column">
+												<h4 class="mega-menu-title">Education</h4>
+												<ul class="mega-menu-links">
+													<li><a href="{{ route('blog.list') }}">What is SIP Trunking?</a><span class="mega-menu-desc">Understanding Canadian SIP infrastructure.</span></li>
+													<li><a href="{{ route('blog.list') }}">Wholesale vs Resale Guide</a><span class="mega-menu-desc">Choosing the right partnership model.</span></li>
+												</ul>
+											</div>
+											<div class="mega-menu-column">
+												<h4 class="mega-menu-title">Technical</h4>
+												<ul class="mega-menu-links">
+													<li><a href="{{ route('blog.list') }}">3CX Configuration Guide</a><span class="mega-menu-desc">Step-by-step setup documentation.</span></li>
+													<li><a href="{{ route('about') }}">Network &amp; SLA Details</a><span class="mega-menu-desc">Infrastructure transparency.</span></li>
+												</ul>
+											</div>
+											<div class="mega-menu-column">
+												<h4 class="mega-menu-title">Authority</h4>
+												<ul class="mega-menu-links">
+													<li><a href="{{ route('blog.list') }}">Blog &amp; Insights</a><span class="mega-menu-desc">Industry updates and telecom analysis.</span></li>
+													<li><a href="{{ route('faq') }}">FAQ</a><span class="mega-menu-desc">Common technical and billing questions.</span></li>
+												</ul>
+											</div>
+											<div class="mega-menu-column mega-menu-cta-col">
+												<h4 class="mega-menu-title">Need Help?</h4>
+												<p class="mega-menu-trust">Technical docs, guides, and dedicated support for your deployment.</p>
+												<a href="{{ route('contact') }}?subject=technical" class="btn btn-mega-cta">Talk to a Specialist<i class="icon-1"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							{{-- Company (4-column mega, like Solutions) --}}
+							<li class="dropdown dropdown-mega">
+								<a class="nav-link dropdown-toggle" href="{{ route('about') }}">Company</a>
+								<div class="mega-menu mega-menu-company">
+									<div class="mega-menu-inner">
+										<div class="mega-menu-grid mega-menu-cols-4">
+											<div class="mega-menu-column">
+												<h4 class="mega-menu-title">About Ixica</h4>
+												<ul class="mega-menu-links">
+													<li><a href="{{ route('about') }}">Company Overview</a><span class="mega-menu-desc">Mission and Canadian telecom focus.</span></li>
+													<li><a href="{{ route('about') }}#network">Network Overview</a><span class="mega-menu-desc">Infrastructure transparency.</span></li>
+												</ul>
+											</div>
+											<div class="mega-menu-column">
+												<h4 class="mega-menu-title">Contact</h4>
+												<ul class="mega-menu-links">
+													<li><a href="{{ route('contact') }}">Sales &amp; Inquiries</a><span class="mega-menu-desc">Wholesale and enterprise sales.</span></li>
+													<li><a href="{{ route('contact') }}?subject=technical">Technical Support</a><span class="mega-menu-desc">Implementation and provisioning.</span></li>
+												</ul>
+											</div>
+											<div class="mega-menu-column">
+												<h4 class="mega-menu-title">Careers</h4>
+												<ul class="mega-menu-links">
+													<li><a href="{{ route('career') }}">Join the Team</a><span class="mega-menu-desc">Open roles and culture.</span></li>
+												</ul>
+											</div>
+											<div class="mega-menu-column mega-menu-cta-col">
+												<h4 class="mega-menu-title">Get in Touch</h4>
+												<p class="mega-menu-trust">Canadian infrastructure. Dedicated engineers. Long-term partnerships.</p>
+												<a href="{{ route('contact') }}" class="btn btn-mega-cta">Contact Us<i class="icon-1"></i></a>
+											</div>
+										</div>
+									</div>
 								</div>
 							</li>
 						</ul>
 					</div>
 				</nav>
-				<!-- header-right -->
-				<div class="header-right align-items-center">
-					<div class="menu-call">
-						<i class="icon-uniE90D"></i>
-						<h4>+222 (345) 88 99</h4>
-					</div>
-					<div class="menu-btn">
-						<a href="{{ route('contact') }}" class="btn btn-small-primary">Contact Us<i class="icon-1"></i></a>
-					</div>
+				<!-- header-right: Contact Sales + CTA -->
+				<div class="header-right header-right-ixica align-items-center">
+					<a href="{{ route('contact') }}" class="header-link-contact">Contact Sales</a>
+					<a href="{{ route('contact') }}?subject=wholesale" class="btn btn-small-primary btn-wholesale-cta">Request Wholesale Pricing<i class="icon-1"></i></a>
 					<div class="side-drawer-toggler-btn">
 						<span class="line-1"></span>
 						<span class="line-2"></span>
@@ -168,8 +239,7 @@
 									<img src="{{ asset('assets/images/resources/logo-two.png') }}" alt="twoet-logo-two">
 								</a>
 								<!-- footer-widget-text -->
-								<p class="footer-widget-text">Sorem ipsum dolor sit amet consectetur. Conse laoreesy
-									condimentum sit vitae.
+								<p class="footer-widget-text">Ixica provides wholesale and enterprise SIP trunking solutions across Canada, delivering scalable voice infrastructure for telecom providers, MSPs, and businesses.
 								</p>
 								<!-- footer-widget-social -->
 								<ul class="footer-widget-social">
@@ -260,8 +330,8 @@
 						</a>
 						<!-- copyright -->
 						<div class="copyright">
-							<p>Copyright @{{ date('Y') }},
-								<a href="#">Twoet</a> All Rights Reserved
+							<p>Copyright {{ date('Y') }}
+								<a href="{{ route('home') }}">Ixica</a>. All Rights Reserved.
 							</p>
 						</div>
 						<!-- footer-widget-one-menu-two -->
@@ -297,74 +367,54 @@
 					<!-- main-menu-list -->
 					<ul class="main-menu-list">
 						<li class="dropdown">
-							<a href="#">Home </a>
+							<a href="{{ route('services.list') }}">Solutions</a>
 							<ul>
-								<li><a href="{{ route('home') }}">Home One</a></li>
-								<li><a href="{{ route('home2') }}">Home Two</a></li>
-								<li><a href="{{ route('home3') }}">Home Three</a></li>
-								<li><a href="{{ route('home4') }}">Home Four</a></li>
+								<li><a href="{{ route('services.list') }}">Wholesale SIP Trunking</a></li>
+								<li><a href="{{ route('services.list') }}">Partner Programs</a></li>
+								<li><a href="{{ route('services.list') }}">Enterprise Solutions</a></li>
+								<li><a href="{{ route('contact') }}?subject=specialist">Talk to a Specialist</a></li>
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#">Pages</a>
+							<a href="{{ route('services.list') }}#industries">Industries</a>
 							<ul>
-								<li><a href="{{ route('about') }}">About Us</a></li>
-								<li class="dropdown"><a href="{{ route('movies.list') }}">Movies</a>
-									<ul class="sub-menu-inner">
-										<li><a href="{{ route('movies.list') }}">Movies List</a></li>
-										<li><a href="{{ route('movies.details') }}">Movies Details</a></li>
-									</ul>
-								</li>
-								<li class="dropdown"><a href="#">Team</a>
-									<ul class="sub-menu-inner">
-										<li><a href="{{ route('team.member') }}">Team Member</a></li>
-										<li><a href="{{ route('team.details') }}">Team Details</a></li>
-									</ul>
-								</li>
-								<li><a href="{{ route('package') }}">Package</a></li>
-								<li><a href="{{ route('career') }}">Career</a></li>
-								<li><a href="{{ route('faq') }}">FAQs</a></li>
-								<li><a href="{{ route('testimonial') }}">Testimonial</a></li>
-							</ul>
-						</li>
-						<li class="dropdown current">
-							<a href="#">Services</a>
-							<ul>
-								<li><a href="{{ route('services.list') }}">Services List</a></li>
-								<li><a href="{{ route('services.details') }}">Services Details</a></li>
+								<li><a href="{{ route('services.list') }}#law">Law Firms</a></li>
+								<li><a href="{{ route('services.list') }}#healthcare">Healthcare</a></li>
+								<li><a href="{{ route('services.list') }}#government">Government</a></li>
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#">shop</a>
+							<a href="{{ route('blog.list') }}">Resources</a>
 							<ul>
-								<li><a href="{{ route('shop.page') }}">Shop Page</a></li>
-								<li><a href="{{ route('shop.details') }}">Shop Details</a></li>
-								<li><a href="{{ route('checkout') }}">Checkout</a></li>
+								<li><a href="{{ route('blog.list') }}">Blog &amp; Insights</a></li>
+								<li><a href="{{ route('faq') }}">FAQ</a></li>
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#">Blog</a>
+							<a href="{{ route('about') }}">Company</a>
 							<ul>
-								<li><a href="{{ route('blog.list') }}">Blog List</a></li>
-								<li><a href="{{ route('blog.details') }}">Blog Details</a></li>
+								<li><a href="{{ route('about') }}">About Ixica</a></li>
+								<li><a href="{{ route('contact') }}">Contact</a></li>
+								<li><a href="{{ route('career') }}">Careers</a></li>
 							</ul>
 						</li>
+						<li><a href="{{ route('contact') }}">Contact Sales</a></li>
 						<li>
-							<a href="{{ route('contact') }}">Contact</a>
+							<div class="theme-btn">
+								<a href="{{ route('contact') }}?subject=wholesale" class="btn btn-bg-primary">Request Wholesale Pricing<i class="icon-1"></i></a>
+							</div>
 						</li>
 					</ul>
 				</div>
 				<!-- mobile-nav-contact -->
 				<ul class="mobile-nav-contact list-unstyled">
 					<li>
-						<!-- mobile-menu-call -->
 						<div class="mobile-menu-call">
 							<i class="icon-uniE90D"></i>
-							<a href="#">+222 (345) 88 99</a>
+							<a href="tel:+12223458899">+222 (345) 88 99</a>
 						</div>
 					</li>
 					<li>
-						<!-- mobile-menu-btn -->
 						<div class="theme-btn">
 							<a href="{{ route('contact') }}" class="btn btn-bg-primary">Contact Us<i class="icon-1"></i></a>
 						</div>
