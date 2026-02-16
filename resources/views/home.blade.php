@@ -596,9 +596,6 @@
 			<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="200ms">
 				<div class="cta-one-img">
 					<img src="{{ asset('assets/images/resources/cta-one-img.jpg') }}" alt="Ixica SIP infrastructure">
-					<div class="cta-one-shape-2">
-						<img src="{{ asset('assets/images/shapes/contact-one-shape-2.png') }}" alt="">
-					</div>
 				</div>
 			</div>
 			<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 wow fadeInRight animated" data-wow-duration="1500ms" data-wow-delay="200ms">

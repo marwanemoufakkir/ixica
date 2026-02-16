@@ -51,7 +51,7 @@
 				</div>
 				<nav class="navbar-expand-lg">
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav navbar-nav-ixica me-auto">
+						<ul class="navbar-nav navbar-nav-ixica mx-auto">
 							{{-- Solutions (4-column mega, like Industries) --}}
 							<li class="dropdown dropdown-mega">
 								<a class="nav-link dropdown-toggle" href="{{ route('services.list') }}">Solutions</a>
@@ -203,6 +203,7 @@
 				</nav>
 				<!-- header-right: CTA -->
 				<div class="header-right header-right-ixica align-items-center">
+					
 					<a href="{{ route('contact') }}?subject=wholesale" class="btn btn-small-primary btn-wholesale-cta">Request Wholesale Pricing<i class="icon-1"></i></a>
 					<div class="side-drawer-toggler-btn">
 						<span class="line-1"></span>
@@ -229,90 +230,63 @@
 				<div class="footer-main-shape-2"></div>
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-3 col-md-6 col-sm-12 wow fadeInRight animated" data-wow-duration="1500ms"
-							data-wow-delay="00ms">
-							<!-- footer-widget-about -->
-							<div class="footer-widget footer-widget-about">
-								<!-- footer-widget-logo -->
-								<a href="{{ route('home') }}" class="footer-widget-logo">
-									<img src="https://www.ixica.com/assets/img/footer-logo.png" alt="Ixica Logo">
-								</a>
-								<!-- footer-widget-text -->
-								<p class="footer-widget-text">Ixica provides wholesale and enterprise SIP trunking solutions across Canada, delivering scalable voice infrastructure for telecom providers, MSPs, and businesses.
-								</p>
-								<!-- footer-widget-social -->
-								<ul class="footer-widget-social">
-									<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12 wow fadeInRight animated" data-wow-duration="1500ms"
-							data-wow-delay="150ms">
-							<!-- footer-widget-links -->
-							<div class="footer-widget footer-widget-links">
-								<!-- footer-widget-title -->
-								<h3 class="footer-widget-title">Links</h3><!-- /.footer-widget-title -->
-								<!-- footer-widget-links-details -->
+						<div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+							<!-- footer-widget -->
+							<div class="footer-widget">
+								<h3 class="footer-widget-title">Solutions</h3>
 								<ul class="footer-widget-links-details">
-									<li>
-										<a href="{{ route('about') }}">About</a>
-									</li>
-									<li>
-										<a href="{{ route('services.list') }}">Our Services</a>
-									</li>
-									<li>
-										<a href="#">Clients Say</a>
-									</li>
-									<li>
-										<a href="#">Company History</a>
-									</li>
-									<li>
-										<a href="{{ route('blog.list') }}">Latest News</a>
-									</li>
-									<li>
-										<a href="{{ route('contact') }}">Contact Us</a>
-									</li>
+									<li><a href="{{ route('services.list') }}#wholesale-sip">Wholesale SIP Trunking</a></li>
+									<li><a href="{{ route('services.list') }}#carrier-interconnect">Carrier Interconnect</a></li>
+									<li><a href="{{ route('services.list') }}#network">Network &amp; Infrastructure</a></li>
+									<li><a href="{{ route('services.list') }}#sla">SLA &amp; Reliability</a></li>
+									<li><a href="{{ route('contact') }}?subject=reseller">SIP Reseller Program</a></li>
+									<li><a href="{{ route('services.list') }}#partner-benefits">Partner Benefits</a></li>
+									<li><a href="{{ route('services.list') }}#enterprise">Enterprise SIP Trunking</a></li>
+									<li><a href="{{ route('services.list') }}#3cx">SIP for 3CX</a></li>
+									<li><a href="{{ route('services.list') }}#yeastar">SIP for Yeastar</a></li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12 wow fadeInRight animated" data-wow-duration="1500ms"
-							data-wow-delay="300ms">
-							<!-- footer-widget-contact -->
-							<div class="footer-widget footer-widget-contact">
-								<!-- footer-widget-title -->
-								<h3 class="footer-widget-title">Contact</h3>
-								<!-- footer-widget-contact-details -->
-								<ul class="footer-widget-contact-details">
-									<li>
-										<i class="icon-map"></i>
-										<p>55 main street, 2nd block Melbourne, Australia</p>
-									</li>
-									<li>
-										<i class="icon-mail"></i>
-										<a href="mailto:support@gmail.com">support@gmail.com</a>
-									</li>
-									<li>
-										<i class="icon-uniE90D"></i>
-										<a href="tel:+000(123)45688">+000 (123) 456 88</a>
-
-									</li>
+						<div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+							<!-- footer-widget -->
+							<div class="footer-widget">
+								<h3 class="footer-widget-title">Industries</h3>
+								<ul class="footer-widget-links-details">
+									<li><a href="{{ route('services.list') }}#law">Law Firms</a></li>
+									<li><a href="{{ route('services.list') }}#transportation">Transportation</a></li>
+									<li><a href="{{ route('services.list') }}#healthcare">Healthcare</a></li>
+									<li><a href="{{ route('services.list') }}#education">Education</a></li>
+									<li><a href="{{ route('services.list') }}#government">Government</a></li>
+									<li><a href="{{ route('services.list') }}#industries">Explore All Industries</a></li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6 col-sm-12 wow fadeInRight animated" data-wow-duration="1500ms"
-							data-wow-delay="450ms">
-							<!-- footer-widget-newsletter -->
-							<div class="footer-widget footer-widget-newsletter">
-								<!-- footer-widget-title -->
-								<h3 class="footer-widget-title">Newsletter</h3>
-								<form action="#">
-									<input type="email" name="EMAIL" placeholder="Email Address">
-									<button class="btn btn-bg-white"><span>Subscribe<i
-												class="icon-1"></i></span></button>
-								</form>
+						<div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+							<!-- footer-widget -->
+							<div class="footer-widget">
+								<h3 class="footer-widget-title">Resources</h3>
+								<ul class="footer-widget-links-details">
+									<li><a href="{{ route('blog.list') }}">What is SIP Trunking?</a></li>
+									<li><a href="{{ route('blog.list') }}">Wholesale vs Resale Guide</a></li>
+									<li><a href="{{ route('blog.list') }}">3CX Configuration Guide</a></li>
+									<li><a href="{{ route('about') }}">Network &amp; SLA Details</a></li>
+									<li><a href="{{ route('blog.list') }}">Blog &amp; Insights</a></li>
+									<li><a href="{{ route('faq') }}">FAQ</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+							<!-- footer-widget -->
+							<div class="footer-widget">
+								<h3 class="footer-widget-title">Company</h3>
+								<ul class="footer-widget-links-details">
+									<li><a href="{{ route('about') }}">Company Overview</a></li>
+									<li><a href="{{ route('about') }}#network">Network Overview</a></li>
+									<li><a href="{{ route('contact') }}">Sales &amp; Inquiries</a></li>
+									<li><a href="{{ route('contact') }}?subject=technical">Technical Support</a></li>
+									<li><a href="{{ route('career') }}">Join the Team</a></li>
+									<li><a href="{{ route('contact') }}">Contact Us</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>

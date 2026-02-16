@@ -772,7 +772,7 @@ header.sticky .header-menu .navbar-nav>li {
 
 .header-menu .navbar-nav>li>a {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 15px;
     color: var(--twonet-dark);
     transition: all 0.3s;
     padding-left: 0 !important;
@@ -792,7 +792,7 @@ header.sticky .header-menu .navbar-nav>li {
 }
 
 .header-menu .navbar-nav>li a i {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .header-menu .navbar-nav>li:hover a i::before {
@@ -1124,7 +1124,7 @@ header.sticky .header-menu .navbar-nav>li {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f105";
-    font-size: 16px;
+    font-size: 13px;
     color: var(--twonet-dark);
     transform: translateY(-50%) rotate(90deg);
     transition: all 0.3s;
@@ -1261,9 +1261,13 @@ header.sticky .header-menu .navbar-nav>li {
 /********************
 * Ixica Enterprise Mega Menu
 ********************/
-.header-menu-ixica {
+/* .header-menu-ixica {
     padding-left: 40px;
     padding-right: 40px;
+} */
+.header-menu-ixica .navbar-nav-ixica {
+    justify-content: center;
+    width: 100%;
 }
 .header-menu-ixica .navbar-nav-ixica > li + li {
     margin-left: 36px;
@@ -1397,7 +1401,19 @@ header.sticky .header-menu .navbar-nav>li {
 .mega-menu-links li:hover {
     background: #f6f7f9;
     border-radius: 6px;
-    padding-left: 12px;
+    padding: 12px 12px 12px 0;
+}
+.mega-menu-links li:first-child:hover {
+    padding-top: 0;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 0;
+}
+.mega-menu-links li:last-child:hover {
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 0;
+    padding-left: 0;
 }
 .mega-menu-links a {
     display: block;
@@ -3786,6 +3802,38 @@ header.sticky .header-menu .navbar-nav>li {
     padding-left: 15px;
 }
 
+/* Footer Column Separators */
+.footer-column {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.footer-column:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-column:first-child {
+    padding-left: 0;
+}
+
+@media (max-width: 991px) {
+    .footer-column::before {
+        display: none;
+    }
+    .footer-column {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
 .footer-widget-links-details>li>a::before {
     position: absolute;
     top: 50%;
@@ -3799,7 +3847,6 @@ header.sticky .header-menu .navbar-nav>li {
     color: var(--twonet-primery);
     transition: all 0.3s;
 }
-
 .footer-widget-links-details>li>a:hover::before {
     opacity: 1;
 }
