@@ -721,7 +721,7 @@ a {
 
 
 .main-header {
-    border-top: 4px solid var(--twonet-primery);
+    /* //border-top: 4px solid var(--twonet-primery); */
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -755,7 +755,8 @@ a {
 
 .header-menu .logo-box img,
 .header-menu-two .logo-box img {
-    width: 130px;
+    height: auto;
+    width: 120px;
 }
 
 .header-menu .navbar-nav>li {
@@ -1294,7 +1295,7 @@ header.sticky .header-menu .navbar-nav>li {
     left: 0;
     right: 0;
     width: 100%;
-    top: 95px;
+    top: 82px;
     margin-top: 0;
     background: #fff;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
@@ -4971,7 +4972,7 @@ header.sticky .header-menu-two .navbar-nav-two>li {
 * Banner-two
 ****************/
 .banner-two {
-    background: url(../images/background/banner-four-bg-img.jpg) no-repeat;
+    background: url(../images/background/slider-3-1.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 229px;
@@ -5129,7 +5130,7 @@ header.sticky .header-menu-two .navbar-nav-two>li {
 
 .banner-two-info .banner-two-info-bottom li i {
     padding-right: 10px;
-    color: var(--twonet-yellow-light);
+    color: #fff;
 }
 
 .banner-two-video-btn {

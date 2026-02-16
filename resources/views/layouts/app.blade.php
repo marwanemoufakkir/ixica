@@ -46,7 +46,7 @@
 				<!-- header-logo -->
 				<div class="logo-box">
 					<a href="{{ route('home') }}" aria-label="Ixica Home">
-						<img src="{{ asset('assets/images/resources/logo.png') }}" alt="Ixica — SIP Trunking Canada">
+						<img src="https://www.ixica.com/assets/img/logo/logo-animated.gif" alt="Ixica — SIP Trunking Canada">
 					</a>
 				</div>
 				<nav class="navbar-expand-lg">
@@ -201,9 +201,8 @@
 						</ul>
 					</div>
 				</nav>
-				<!-- header-right: Contact Sales + CTA -->
+				<!-- header-right: CTA -->
 				<div class="header-right header-right-ixica align-items-center">
-					<a href="{{ route('contact') }}" class="header-link-contact">Contact Sales</a>
 					<a href="{{ route('contact') }}?subject=wholesale" class="btn btn-small-primary btn-wholesale-cta">Request Wholesale Pricing<i class="icon-1"></i></a>
 					<div class="side-drawer-toggler-btn">
 						<span class="line-1"></span>
@@ -236,7 +235,7 @@
 							<div class="footer-widget footer-widget-about">
 								<!-- footer-widget-logo -->
 								<a href="{{ route('home') }}" class="footer-widget-logo">
-									<img src="{{ asset('assets/images/resources/logo-two.png') }}" alt="twoet-logo-two">
+									<img src="https://www.ixica.com/assets/img/footer-logo.png" alt="Ixica Logo">
 								</a>
 								<!-- footer-widget-text -->
 								<p class="footer-widget-text">Ixica provides wholesale and enterprise SIP trunking solutions across Canada, delivering scalable voice infrastructure for telecom providers, MSPs, and businesses.
@@ -398,7 +397,6 @@
 								<li><a href="{{ route('career') }}">Careers</a></li>
 							</ul>
 						</li>
-						<li><a href="{{ route('contact') }}">Contact Sales</a></li>
 						<li>
 							<div class="theme-btn">
 								<a href="{{ route('contact') }}?subject=wholesale" class="btn btn-bg-primary">Request Wholesale Pricing<i class="icon-1"></i></a>

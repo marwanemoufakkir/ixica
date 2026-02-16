@@ -22,7 +22,7 @@
 						<li><i class="flaticon-secure-shield"></i> SLA protection</li>
 					</ul>
 					<div class="theme-btn">
-						<a href="{{ route('contact') }}?subject=wholesale" class="btn btn-bg-white-two">Request Wholesale Pricing<i class="icon-1"></i></a>
+						<a href="{{ route('contact') }}?subject=wholesale" class="btn btn-small-primary btn-wholesale-cta">Request Wholesale Pricing<i class="icon-1"></i></a>
 					</div>
 				</div>
 			</div>
@@ -440,6 +440,61 @@
 .whychoose-one--charcoal .whychoose-one__tagline {
 	color: #b0b0b0;
 }
+
+/* Brand/Partner Logo Section Styling */
+.brand-one-inner-img {
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+	transition: opacity 0.3s ease;
+}
+
+.brand-one-inner-img a {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.brand-one-inner-img img {
+	max-width: 100%;
+	height: auto;
+	max-height: 80px;
+	width: auto;
+	object-fit: contain;
+	filter: grayscale(100%);
+	opacity: 0.7;
+	transition: all 0.3s ease;
+}
+
+.brand-one-inner-img:hover img {
+	filter: grayscale(0%);
+	opacity: 1;
+	transform: scale(1.05);
+}
+
+@media (max-width: 991px) {
+	.brand-one-inner-img {
+		min-height: 80px;
+		padding: 10px;
+	}
+	
+	.brand-one-inner-img img {
+		max-height: 60px;
+	}
+}
+
+@media (max-width: 575px) {
+	.brand-one-inner-img {
+		min-height: 70px;
+		padding: 8px;
+	}
+	
+	.brand-one-inner-img img {
+		max-height: 50px;
+	}
+}
 </style>
 @endpush
 
@@ -549,7 +604,6 @@
 			<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 wow fadeInRight animated" data-wow-duration="1500ms" data-wow-delay="200ms">
 				<div class="cta-one-info">
 					<div class="section-title">
-						<i class="icon-main-icon"></i>
 						<span>Get Started</span>
 					</div>
 					<div class="section-main-title">
@@ -565,46 +619,4 @@
 	</div>
 </section>
 
-<!-- brand-one (before footer) -->
-<section class="brand-one">
-	<div class="container">
-		<div class="brand-one-inner text-center">
-			<div class="section-title">
-				<h6>Trusted by carriers and <span>enterprise</span> partners</h6>
-			</div>
-			<div class="row">
-				<div class="col-lg-2 col-md-4 col-sm-4 col-6 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="100ms">
-					<div class="brand-one-inner-img">
-						<a href="#"><img src="{{ asset('assets/images/resources/client-1.jpg') }}" alt="Partner"></a>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-4 col-sm-4 col-6 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="200ms">
-					<div class="brand-one-inner-img">
-						<a href="#"><img src="{{ asset('assets/images/resources/client-2.png') }}" alt="Partner"></a>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-4 col-sm-4 col-6 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="300ms">
-					<div class="brand-one-inner-img">
-						<a href="#"><img src="{{ asset('assets/images/resources/client-3.png') }}" alt="Partner"></a>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-4 col-sm-4 col-6 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="400ms">
-					<div class="brand-one-inner-img">
-						<a href="#"><img src="{{ asset('assets/images/resources/client-4.png') }}" alt="Partner"></a>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-4 col-sm-4 col-6 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="500ms">
-					<div class="brand-one-inner-img">
-						<a href="#"><img src="{{ asset('assets/images/resources/client-5.png') }}" alt="Partner"></a>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-4 col-sm-4 col-6 wow fadeInLeft animated" data-wow-duration="1500ms" data-wow-delay="600ms">
-					<div class="brand-one-inner-img">
-						<a href="#"><img src="{{ asset('assets/images/resources/client-6.png') }}" alt="Partner"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
 @endsection
